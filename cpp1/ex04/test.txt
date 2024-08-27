@@ -1,0 +1,38 @@
+Générateur de faux texte
+
+Lorem Ipsum est un générateur de mots faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listes. Vous obtenez alors un texte aléatoire que vous pourrez ensuite utiliser librement dans vos maquettes.
+
+Le texte généré est du pseudo latin et peut donner l'impression d'être du vrai texte.
+
+ 
+
+Nouveau : le plugin Faux Texte pour Figma est là !
+
+ 
+
+Faux-Texte est une réalisation du studio de création de sites internet indépendant Prélude Prod.
+
+Si vous aimez la photographie d'art et l'esprit zen, jetez un œil sur le site de ce photographe à Palaiseau, en Essonne (France).
+Générer des paragraphes :
+1 paragraphe
+3 paragraphes
+5 paragraphes
+10 paragraphes
+15 paragraphes
+20 paragraphes
+Générer des mots :
+5 mots
+10 mots
+15 mots
+20 mots
+30 mots
+40 mots
+50 mots
+100 mots
+Générer des listes :
+5 listes
+10 listes
+15 listes
+20 listes
+30 listes
+40 listes
