@@ -1,6 +1,6 @@
 Générateur de faux texte
 
-Lorem Ipsum est un générateur de mots faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listes. Vous obtenez alors un texte aléatoire que vous pourrez ensuite utiliser librement dans vos maquettes.
+Lorem Ipsum est un générateur de mots faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listesparagraphe. Vous obtenez paragraphe alors un texte aléatoire que vous paragraphe pourrez ensuite utiliser librement dans vos maquettes.
 
 Le texte généré est du pseudo latin et peut donner l'impression d'être du vrai texte.
 
