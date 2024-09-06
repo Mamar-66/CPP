@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:50:52 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/04 14:14:17 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/06 10:21:10 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,5 +199,33 @@ Fixed& Fixed::operator=(const Fixed& asignement)
 }
 
 /***********************************
-
+ *				MIN / MAX
 ************************************/
+
+Fixed&	Fixed::min(Fixed& a, Fixed& b)
+{
+	if (a < b)
+		return a;
+	return b;
+}
+
+const Fixed&	Fixed::min(const Fixed& a, const Fixed& b)
+{
+	if (a._fixedPoint < b._fixedPoint)
+		return a;
+	return b;
+}
+
+Fixed&	Fixed::max(Fixed& a, Fixed& b)
+{
+	if (a > b)
+		return a;
+	return b;
+}
+
+const Fixed&	Fixed::max(const Fixed& a, const Fixed& b)
+{
+	if (a._fixedPoint > b._fixedPoint)
+		return a;
+	return b;
+}

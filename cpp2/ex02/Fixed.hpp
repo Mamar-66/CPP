@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:38:54 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/04 14:14:10 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/06 10:20:46 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@
 
 			float		toFloat(void) const;
 			int			toInt(void) const;
+
+			static			Fixed&	min(Fixed& a, Fixed& b);
+			static const	Fixed&	min(const Fixed& a, const Fixed& b);
+			static			Fixed&	max(Fixed& a, Fixed& b);
+			static const	Fixed&	max(const Fixed& a, const Fixed& b);
 
 		private :
 			int					_fixedPoint;
