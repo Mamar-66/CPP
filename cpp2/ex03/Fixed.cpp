@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:50:52 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/08 17:41:29 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/09 16:58:07 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ int	Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return this->_fixedPoint;
+}
+
+int			Fixed::getFixedPoint(void) const
+{
+	return (_fixedPoint);
 }
 
 void	Fixed::setRawBits(int const raw)
@@ -126,17 +131,17 @@ Fixed		Fixed::operator+(const Fixed& fixed)
 	return result;
 }
 
-Fixed		Fixed::operator-(const Fixed& fixed)
+Fixed Fixed::operator-(const Fixed &fixed) const
 {
 	Fixed result;
 
 	result._fixedPoint = this->_fixedPoint - fixed._fixedPoint;
-	//result.setRawBits(this->_fixedPoint - fixed._fixedPoint);
+	// result.setRawBits(this->_fixedPoint - fixed._fixedPoint);
 
 	return result;
 }
 
-Fixed		Fixed::operator*(const Fixed& fixed)
+Fixed		Fixed::operator*(const Fixed& fixed) const
 {
 	Fixed result;
 
@@ -146,7 +151,7 @@ Fixed		Fixed::operator*(const Fixed& fixed)
 	return result;
 }
 
-Fixed		Fixed::operator/(const Fixed& fixed)
+Fixed		Fixed::operator/(const Fixed& fixed) const
 {
 	Fixed result;
 
@@ -193,7 +198,6 @@ Fixed	Fixed::operator--(int)
 
 Fixed& Fixed::operator=(const Fixed& asignement)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	this->_fixedPoint = asignement._fixedPoint;
 	return *this;
 }

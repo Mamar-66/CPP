@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:38:54 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/06 10:20:46 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/09 16:57:56 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 	#include <iostream>
 	#include <cmath>
+
+	#define RED     "\033[31m"
+	#define ORANGE  "\033[38;5;208m"
+	#define GREEN   "\033[32m"
+	#define BLUE    "\033[34m"
+	#define RESET   "\033[0m"
+	#define BOLD    "\033[1m"
+	#define UNDERLINE "\033[4m"
 
 	class	Fixed
 	{
@@ -33,9 +41,9 @@
 			bool 		operator!=(const Fixed fixed);
 
 			Fixed		operator+(const Fixed& fixed);
-			Fixed		operator-(const Fixed& fixed);
-			Fixed		operator*(const Fixed& fixed);
-			Fixed		operator/(const Fixed& fixed);
+			Fixed		operator-(const Fixed& fixed) const;
+			Fixed		operator*(const Fixed& fixed) const;
+			Fixed		operator/(const Fixed& fixed) const;
 
 			Fixed		&operator++(void);
 			Fixed		&operator--(void);
@@ -44,6 +52,7 @@
 			Fixed 		&operator=(const Fixed &asignement);
 
 			int			getRawBits(void) const;
+			int			getFixedPoint(void) const;
 			void		setRawBits(int const raw);
 
 			float		toFloat(void) const;

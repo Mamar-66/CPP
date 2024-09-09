@@ -6,6 +6,8 @@ CFLAGS	=	-Wall -Werror -Wextra -std=c++98 -g
 
 SRCS	=	main.cpp \
 			Fixed.cpp \
+			Point.cpp \
+			bsq.cpp \
 
 OBJS	=	$(SRCS:%.CPP=%.O)
 

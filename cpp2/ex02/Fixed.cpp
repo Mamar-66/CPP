@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:50:52 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/06 10:21:10 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/09 13:31:10 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,7 +193,6 @@ Fixed	Fixed::operator--(int)
 
 Fixed& Fixed::operator=(const Fixed& asignement)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	this->_fixedPoint = asignement._fixedPoint;
 	return *this;
 }

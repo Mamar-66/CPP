@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 17:10:08 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/08 17:41:58 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/09 17:14:10 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,14 @@
 			Point(const Point& point);
 			~Point(void);
 
-		private :
-			const Fixed _x;
-			const Fixed _y;
+			Fixed const getFixedX(void) const;
+			Fixed const getFixedY(void) const;
 
+		private:
+			const Fixed		_x;
+			const Fixed		_y;
 	};
+
+	bool bsq(Point const a, Point const b, Point const c, Point const point);
 
 #endif

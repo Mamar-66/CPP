@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:37:21 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/08 17:44:18 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/09 18:46:01 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int	main(void) 
 {
+	Point a(3, 2);
+	Point b(5, 3);
+	Point c(3, 3.5);
+	Point p(4.9, 3);
 
-
-	std::cout << "Hello Word" << std::endl;
+	std::cout << bsq(a, b, c, p) << std::endl;
 
 	return 0;
 }
