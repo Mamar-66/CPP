@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 08:28:04 by omfelk            #+#    #+#             */
-/*   Updated: 2024/08/27 17:23:02 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/10 08:14:44 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
-using std::cout;
-using std::endl;
 
 void	replace(char **argv, std::ifstream &filename_input)
 {
@@ -63,12 +60,12 @@ void	prog(char **argv)
 	if (filename.good())
 	{
 		if (filename.peek() == std::ifstream::traits_type::eof())
-			cout << RED "error file is empty" RESET << endl;
+			std::cout << RED "error file is empty" RESET << std::endl;
 		else
 			replace(argv, filename);
 	}
 	else
-		cout << RED  "File open error, may be the file does not exist or access is not authorized." RESET << endl;
+		std::cout << RED  "File open error, may be the file does not exist or access is not authorized." RESET << std::endl;
 
 	filename.close();
 }
@@ -79,8 +76,8 @@ int main(int argc, char **argv)
 		prog(argv);
 	else
 	{
-		cout << RED "Error argument" RESET << endl;
-		cout << GREEN "<filname> <str1> <str2>"  RESET << endl;
+		std::cout << RED "Error argument" RESET << std::endl;
+		std::cout << GREEN "<filname> <str1> <str2>"  RESET << std::endl;
 	}
 	return 0;
 }
