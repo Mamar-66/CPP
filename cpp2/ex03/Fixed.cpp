@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:50:52 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/09 16:58:07 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/10 07:55:07 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,30 @@
 Fixed::Fixed(void) :
 	_fixedPoint(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int nb)
 {
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 	this->_fixedPoint = nb << _bitNb;
 }
 
 Fixed::Fixed(const float nb)
 {
-	std::cout << "Float constructor called" << std::endl;
+	//std::cout << "Float constructor called" << std::endl;
 	this->_fixedPoint = (int)roundf(nb * (1 << _bitNb));
 }
 
 Fixed::Fixed(const Fixed &fixed) :
 	_fixedPoint(fixed._fixedPoint)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Fixed destructor called" << std::endl;
+	//std::cout << "Fixed destructor called" << std::endl;
 }
 
 /***********************************

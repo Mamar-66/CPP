@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 17:10:08 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/09 17:14:10 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/10 07:59:08 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 			Point(float x, float y);
 			Point(const Point& point);
 			~Point(void);
+
+			Point &operator=(const Point &point);
 
 			Fixed const getFixedX(void) const;
 			Fixed const getFixedY(void) const;

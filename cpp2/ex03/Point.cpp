@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 17:20:43 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/09 17:17:41 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/10 08:00:23 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,14 @@ Point::Point(const Point& point)
 
 Point::~Point(void)
 {
-	std::cout << "Point destructor called" << std::endl;
+	//std::cout << "Point destructor called" << std::endl;
+}
+
+Point&	Point::operator=(const Point &point)
+{
+	(void)point;
+	std::cout << "Assignment of const variables impossible" << std::endl;
+	return *this;
 }
 
 Fixed	const Point::getFixedX(void) const
@@ -41,3 +48,4 @@ Fixed	const Point::getFixedY(void) const
 {
 	return this->_y;
 }
+

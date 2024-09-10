@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 16:14:47 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/09 18:45:02 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/10 07:18:14 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ bool bsq(Point const a, Point const b, Point const c, Point const point)
 	area2 = area(a, point, c);
 	area3 = area(a, b, point);
 
-	std::cout << area_origin << std::endl;
-	std::cout << area1 << std::endl;
-	std::cout << area2 << std::endl;
-	std::cout << area3 << std::endl;
+	//std::cout << area_origin << std::endl;
+	//std::cout << area1 << std::endl;
+	//std::cout << area2 << std::endl;
+	//std::cout << area3 << std::endl;
 
 	if (area1 == 0 || area2 == 0 || area3 == 0)
 		return false;
