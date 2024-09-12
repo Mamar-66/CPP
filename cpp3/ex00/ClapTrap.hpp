@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 15:34:21 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/10 16:17:46 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/12 14:55:07 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
 			ClapTrap(std::string name);
 			ClapTrap(ClapTrap& claptrap);
 			~ClapTrap(void);
+
+			ClapTrap &operator=(const ClapTrap& claptrap);
 
 			void	attack(const std::string& target);
 			void	beRepaired(unsigned int amount);

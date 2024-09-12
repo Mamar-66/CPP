@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 15:39:33 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/11 16:46:40 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/12 14:55:48 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ ClapTrap::ClapTrap(ClapTrap& claptrap):
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << RED "Destructor >> " RESET 	<< this->_name << " << called" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
+{
+	this->_name = clapTrap._name;
+	this->_hit = clapTrap._hit;
+	this->_energy = clapTrap._energy;
+	this->_attack = clapTrap._attack;
+	return *this;
 }
 
 /*----------------------------------------------------
