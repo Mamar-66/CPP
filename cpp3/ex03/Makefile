@@ -2,7 +2,7 @@ NAME	=	DiamondTrap
 
 CC	=	c++
 
-CFLAGS	=	-Wall -Werror -Wextra -std=c++98 -g
+CFLAGS	=	-Wall -Werror -Wextra -Wshadow -std=c++98 -g
 
 SRCS	=	main.cpp \
 			ClapTrap.cpp \

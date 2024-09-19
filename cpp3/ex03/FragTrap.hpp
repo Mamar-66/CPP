@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 14:09:23 by omfelk            #+#    #+#             */
-/*   Updated: 2024/09/15 09:47:07 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/09/19 10:36:19 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 	#include "ClapTrap.hpp"
 
-	class FragTrap : public ClapTrap
+	class FragTrap : virtual public ClapTrap
 	{
 		public :
 			FragTrap(void);
