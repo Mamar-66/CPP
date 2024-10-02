@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:27:07 by omfelk            #+#    #+#             */
-/*   Updated: 2024/08/26 15:02:00 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:06:09 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ HumanA::HumanA(std::string name, Weapon &weapon) :
 
 HumanA::~HumanA(void)
 {
-		//std::cout << RED "destructor HumanA" RESET << std::endl;
+	std::cout << RED "destructor HumanA" RESET << std::endl;
 }
 
 void	HumanA::attack(void)

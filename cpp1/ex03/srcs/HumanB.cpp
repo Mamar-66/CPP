@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:15:33 by omfelk            #+#    #+#             */
-/*   Updated: 2024/08/26 15:07:16 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:06:15 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ HumanB::HumanB(std::string name) :
 
 HumanB::~HumanB(void)
 {
-	//std::cout << RED "destructor HumanB" RESET << std::endl;
+	std::cout << RED "destructor HumanB" RESET << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon &weapon)

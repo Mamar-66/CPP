@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 14:27:48 by omfelk            #+#    #+#             */
-/*   Updated: 2024/08/26 06:58:40 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/01 12:20:52 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ Zombie	*zombieHorde(int N, std::string name)
 		return_horde[i].set_Name(name + nb);
 		number.str("");
 	}
-
 	return return_horde;
 }
