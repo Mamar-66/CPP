@@ -6,11 +6,11 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:41:18 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/13 13:53:41 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/14 12:01:41 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "../includes/AMateria.hpp"
 
 AMateria::AMateria() : _type("default")
 {
