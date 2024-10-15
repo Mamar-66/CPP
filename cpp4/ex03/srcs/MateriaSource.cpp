@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 10:54:59 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/14 12:01:32 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/15 09:06:50 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,11 @@ void	MateriaSource::learnMateria(AMateria* ptr)
 
 AMateria*	MateriaSource::createMateria(std::string const & type)
 {
-	if (&type)
+	for (int i = 0; i < 4; i++)
 	{
-		for (int i = 0; i < 4; i++)
-		{
-			if (this->_materiaTab[i] && this->_materiaTab[i]->getType() == type)
-				return this->_materiaTab[i]->clone();
-		}
+		if (this->_materiaTab[i] && this->_materiaTab[i]->getType() == type)
+			return this->_materiaTab[i]->clone();
 	}
+
 	return NULL;
 }

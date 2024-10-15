@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 09:43:16 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/14 10:26:07 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/15 09:02:08 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 	#include <string>
 	#include <iostream>
 	#include "ICharacter.hpp"
+	#include "AMateria.hpp"
 
 	#define RED     "\033[31m"
 	#define ORANGE  "\033[38;5;208m"

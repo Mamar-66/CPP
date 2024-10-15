@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:44:50 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/14 12:03:52 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/15 09:09:12 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 	#define	ICHARACTER_HPP
 
 	#include <string>
-	// #include "AMateria.hpp"
+
 	class AMateria;
 
 	class ICharacter

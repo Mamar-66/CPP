@@ -8,11 +8,11 @@ SRC_PATH	=	srcs/
 OBJ_PATH	=	objs/
 
 SRC	=	main.cpp \
-		AMateria.cpp \
 		Character.cpp \
 		Cure.cpp \
 		Ice.cpp \
 		MateriaSource.cpp \
+		AMateria.cpp \
 
 SRCS	=	$(addprefix $(SRC_PATH), $(SRC))
 
