@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:27:38 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/16 17:07:43 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/17 18:06:01 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 	#define BOLD    "\033[1m"
 	#define UNDERLINE "\033[4m"
 
-	class	From
+	class	Form
 	{
 		private :
 			const std::string	_name;
@@ -33,14 +33,19 @@
 			const int			_gradeBeExecute;
 
 		public :
-			From();
-			From(const std::string& name, const int& grad_be_signed, const int& grad_be_execute);
-			From(const From& from);
-			~From();
+			Form();
+			Form(const std::string& name, const int& grad_be_signed, const int& grad_be_execute);
+			Form(const Form& form);
+			~Form();
 
-			From &operator=(const From& from);
+			Form &operator=(const Form& form);
 
-			class	GradeTooHighException : std::exception
+			const std::string		getName() const;
+			bool					getIsSigned() const;
+			const int				getGradeBeSigned() const;
+			const int				getGradeBeExecute() const;
+
+			class GradeTooHighException : std::exception
 			{
 				public :
 					const char* what() const throw();
@@ -51,6 +56,9 @@
 				public :
 					const char* what() const throw();
 			};
+
 	};
+	
+	std::ostream&	operator<<(std::ostream& o, const Form& form);
 
 #endif
