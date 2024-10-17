@@ -6,11 +6,12 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:32:51 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/16 12:54:53 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/17 22:32:01 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/Form.hpp"
 
 int	main()
 {
@@ -18,62 +19,50 @@ std::cout << std::string(50, '-') << std::endl;
 	{
 		try
 		{
-			Bureaucrat high("high", 0);
+			Form form1("test1", 0, 0);
 		}
-		catch (const std::exception& e)
+		catch (const Form::GradeTooHighException& e)
 		{
-			std::cerr << e.what() << std::endl;
+			std::cerr << " " <<  e.what() << std::endl;
 		}
 	}
 std::cout << std::string(50, '-') << std::endl;
 	{
 		try
 		{
-			Bureaucrat low("low", 151);
+			Form form2("test2", 151, 151);
 		}
-		catch (const std::exception& e)
+		catch (const Form::GradeTooLowException& e)
 		{
 			std::cerr << e.what() << std::endl;
 		}
 	}
 std::cout << std::string(50, '-') << std::endl;
 	{
-		Bureaucrat test1("test1", 2);
+		Bureaucrat	test1("test3_buraucrat", 150);
+		Form		form3("test3_form", 100, 100);
 
 		try
 		{
-			std::cout << test1 << std::endl;
-
-			test1.incrementGrade();
-
-			std::cout << test1 << std::endl;
-
-			test1.incrementGrade();
-
-			std::cout << test1 << std::endl;
+			test1.signForm(form3);
 		}
-		catch(const std::exception& e)
+		catch(const Form::GradeTooLow& e)
 		{
 			std::cerr << e.what() << std::endl;
 		}
 	}
 std::cout << std::string(50, '-') << std::endl;
 	{
-		Bureaucrat test2("test2", 149);
+		Bureaucrat	test1("test4_buraucrat", 100);
+		Form		form3("test4_form", 100, 100);
 
 		try
 		{
-			std::cout << test2 << std::endl;
-
-			test2.decrementGrade();
-
-			std::cout << test2 << std::endl;
-
-			test2.decrementGrade();
-
-			std::cout << test2 << std::endl;
+			std::cout << form3 << std::endl;
+			test1.signForm(form3);
+			std::cout << form3 << std::endl;
 		}
-		catch(const std::exception& e)
+		catch(const Form::GradeTooLow& e)
 		{
 			std::cerr << e.what() << std::endl;
 		}

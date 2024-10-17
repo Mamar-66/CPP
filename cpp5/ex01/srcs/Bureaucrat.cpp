@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:48:11 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/16 16:51:55 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/17 22:41:25 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int					Bureaucrat::getGrade() const
 
 
 /*
-						INCREMENT / DECREMENT
+						fonction menbre
 */
 
 void	Bureaucrat::incrementGrade( int value )
@@ -93,6 +93,19 @@ void	Bureaucrat::decrementGrade( int value )
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_grade += value;
+}
+
+void	Bureaucrat::signForm(const Form& form) const
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << *this << " signed " << form << std::endl;
+	}
+	catch(const Form::GradeTooLow& e)
+	{
+		std::cerr << *this << "Couldn't sign " << form << " because\n" << e.what() << std::endl;
+	}
 }
 
 /*
