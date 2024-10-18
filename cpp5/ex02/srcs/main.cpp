@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:32:51 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/18 12:10:08 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/18 15:10:26 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,49 +17,56 @@
 int	main()
 {
 
-	std::cout << "Hello word" << std::endl;
 std::cout << std::string(50, '-') << std::endl;
 	{
-		try
-		{
-			Bureaucrat				br0("br0", 146);
-			ShrubberyCreationForm	home("home");
+
+		Bureaucrat				bureaucrat("human0", 146);
+		ShrubberyCreationForm	home("home");
 			
 
-			std::cout << br0 << std::endl;
-			br0.executeForm(home);
+		std::cout << bureaucrat << std::endl;
+		bureaucrat.executeForm(home);
+	}
+std::cout << std::string(50, '-') << std::endl;
+	{
+
+		Bureaucrat				bureaucrat("human0", 144);
+		ShrubberyCreationForm	home("home");
+			
+
+		std::cout << bureaucrat << std::endl;
+
+		try
+		{
+			bureaucrat.signForm(home);
 		}
-		catch (const AForm::GradeTooHighException& e)
+		catch(const ShrubberyCreationForm::GradeTooLow& e)
 		{
 			std::cerr << e.what() << std::endl;
 		}
-	}
-std::cout << std::string(50, '-') << std::endl;
-// 	{
-// 		try
-// 		{
-// 			Form form2("test2", 151, 151);
-// 		}
-// 		catch (const Form::GradeTooLowException& e)
-// 		{
-// 			std::cerr << e.what() << std::endl;
-// 		}
-// 	}
-// std::cout << std::string(50, '-') << std::endl;
-// 	{
-// 		Bureaucrat	test1("test3_buraucrat", 150);
-// 		Form		form3("test3_form", 100, 100);
 
-// 		try
-// 		{
-// 			test1.signForm(form3);
-// 		}
-// 		catch(const Form::GradeTooLow& e)
-// 		{
-// 			std::cerr << e.what() << std::endl;
-// 		}
-// 	}
-// std::cout << std::string(50, '-') << std::endl;
+		bureaucrat.executeForm(home);
+	}
+ std::cout << std::string(50, '-') << std::endl;
+ 	{
+		Bureaucrat				bureaucrat("human0", 130);
+		ShrubberyCreationForm	home("home");
+			
+
+		std::cout << bureaucrat << std::endl;
+
+		try
+		{
+			bureaucrat.signForm(home);
+		}
+		catch(const ShrubberyCreationForm::GradeTooLow& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+
+		bureaucrat.executeForm(home);
+ 	}
+ std::cout << std::string(50, '-') << std::endl;
 // 	{
 // 		Bureaucrat	test1("test4_buraucrat", 100);
 // 		Form		form3("test4_form", 100, 100);

@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:48:11 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/18 11:58:51 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/18 14:58:48 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 Bureaucrat::Bureaucrat() : _name( "default_Bureaucrat" ), _grade( 150 )
 {
-	std::cout << ORANGE "Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Constructeur Bureaucrate >> " RED << _name << " << called" RESET << std::endl;
 }
 
 Bureaucrat::Bureaucrat( const std::string name, int grade ) : _name( name )
@@ -31,17 +31,17 @@ Bureaucrat::Bureaucrat( const std::string name, int grade ) : _name( name )
 	else
 		this->_grade = grade;
 
-	std::cout << ORANGE "Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Constructeur Bureaucrate >> " RED << _name << " << called" RESET << std::endl;
 }
 
 Bureaucrat::Bureaucrat( const Bureaucrat& bureaucrat ) : _name(bureaucrat._name), _grade(bureaucrat._grade)
 {
-	std::cout << ORANGE "Copy Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Copy Constructeur Bureaucrate >> " RED << _name << " << called" RESET << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << ORANGE "Destructor >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Destructor Bureaucrate >> " RED << _name << " << called" RESET << std::endl;
 }
 
 /*
@@ -115,9 +115,13 @@ void	Bureaucrat::executeForm(AForm const & form)
 		form.execute_action(*this);
 		std::cout << *this << " executed " << form << std::endl;
 	}
-	catch(const std::exception& e)
+	catch(const AForm::AFromNotSigned& e)
 	{
-		std::cerr << *this << " cannot execute " << form << " because " << e.what() << '\n';
+		std::cerr << *this << " cannot execute " << form << " because "  << e.what() << '\n';
+	}
+	catch(const AForm::GradeTooLow& e)
+	{
+		std::cerr << *this << " cannot execute " << form << " because "  << e.what() << '\n';
 	}
 	
 }

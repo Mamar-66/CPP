@@ -20,7 +20,7 @@ AForm::AForm() :
 	_name( "default_AForm" ), _target("default_target"),_isSigned( false),
 	_gradeBeSigned(1), _gradeBeExecute(1)
 {
-	std::cout << ORANGE "Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Constructeur Form >> " RED << _name << " << called" RESET << std::endl;
 }
 
 AForm::AForm(const std::string& name, const int& grad_be_signed, const int& grad_be_execute) :
@@ -33,7 +33,7 @@ AForm::AForm(const std::string& name, const int& grad_be_signed, const int& grad
 	else if ( grad_be_signed > 150 || grad_be_execute > 150 )
 		throw AForm::GradeTooLowException();
 
-	std::cout << ORANGE "Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Constructeur Form >> " RED << _name << " << called" RESET << std::endl;
 }
 
 
@@ -47,19 +47,19 @@ AForm::AForm(const std::string &name, const std::string& target ,const int &grad
 	else if ( grad_be_signed > 150 || grad_be_execute > 150 )
 		throw AForm::GradeTooLowException();
 
-	std::cout << ORANGE "Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Constructeur Form >> " RED << _name << " << called" RESET << std::endl;
 }
 
 AForm::AForm(const AForm& form) : 
 	_name( form._name ), _isSigned( form._isSigned ),
 	_gradeBeSigned( form._gradeBeSigned ), _gradeBeExecute( form._gradeBeExecute )
 {
-	std::cout << ORANGE "Copy Constructeur >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Copy Constructeur Form >> " RED << _name << " << called" RESET << std::endl;
 }
 
 AForm::~AForm()
 {
-	std::cout << ORANGE "Destructor >> " RED << _name << " << called" RESET << std::endl;
+	std::cout << ORANGE "Destructor Form >> " RED << _name << " << called" RESET << std::endl;
 }
 
 /*
