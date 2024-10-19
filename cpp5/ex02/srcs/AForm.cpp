@@ -129,7 +129,6 @@ void	AForm::execute(Bureaucrat const & executor) const
 		throw AForm::GradeTooLow();
 }
 
-
 /*
 						CLASS IMBRIQUEES
 */

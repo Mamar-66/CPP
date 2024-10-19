@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 09:38:24 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/18 09:39:53 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/19 17:18:34 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,15 @@
 
 	class PresidentialPardonForm : public AForm
 	{
+		public :
+			PresidentialPardonForm();
+			PresidentialPardonForm(const std::string target);
+			PresidentialPardonForm(const PresidentialPardonForm& other);
+			~PresidentialPardonForm();
 
+			PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
+
+			void			execute_action(const Bureaucrat& other) const;
 	};
 
 #endif

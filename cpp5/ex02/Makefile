@@ -11,6 +11,8 @@ SRC	=	main.cpp \
 		AForm.cpp \
 		Bureaucrat.cpp \
 		ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp \
+		PresidentialPardonForm.cpp \
 
 SRCS	=	$(addprefix $(SRC_PATH), $(SRC))
 
