@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:49:25 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/21 11:41:53 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/22 11:02:59 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,34 @@
 	class	ScalarConverter
 	{
 		private :
-			char	_charValue;
-			int		_intValue;
-			float	_floatValue;
-			double	_doubleValue;
-
-		public :
-			ScalarConverter(const std::string& string);
+			ScalarConverter();
 			ScalarConverter(const ScalarConverter& other);
 			~ScalarConverter();
 
 			ScalarConverter& operator=(const ScalarConverter& other);
 
-			
-		
+		public :
+
+			static void	convert(const std::string& literal);
+
+			class InvalidInput : public std::exception
+			{
+				public :
+					const char* what() const throw();
+			};
+
+			class Impossible : public std::exception
+			{
+				public :
+					const char* what() const throw();
+			};
+
+			class NonDisplayable : public std::exception
+			{
+				public :
+					const char* what() const throw();
+			};
+
 	};
 
 #endif
