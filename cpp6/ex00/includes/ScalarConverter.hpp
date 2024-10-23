@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:49:25 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/22 11:02:59 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/10/23 20:13:36 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 	#define SCALARCONVERTER_HPP
 
 	#include <string>
+	#include <iomanip>
+	#include <float.h>
+	#include <cstdlib>
+	#include <limits.h>
+	#include <climits>
 	#include <iostream>
 
 	#define RED     "\033[31m"
@@ -35,25 +40,7 @@
 
 		public :
 
-			static void	convert(const std::string& literal);
-
-			class InvalidInput : public std::exception
-			{
-				public :
-					const char* what() const throw();
-			};
-
-			class Impossible : public std::exception
-			{
-				public :
-					const char* what() const throw();
-			};
-
-			class NonDisplayable : public std::exception
-			{
-				public :
-					const char* what() const throw();
-			};
+			static void	convert(std::string literal);
 
 	};
 

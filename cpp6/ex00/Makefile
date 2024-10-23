@@ -8,6 +8,7 @@ SRC_PATH	=	srcs/
 OBJ_PATH	=	objs/
 
 SRC	=	main.cpp \
+		ScalarConverter.cpp \
 
 SRCS	=	$(addprefix $(SRC_PATH), $(SRC))
 
