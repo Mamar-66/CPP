@@ -1,49 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 15:26:52 by omfelk            #+#    #+#             */
-/*   Updated: 2024/10/24 20:52:03 by omfelk           ###   ########.fr       */
+/*   Created: 2024/10/24 23:51:25 by omfelk            #+#    #+#             */
+/*   Updated: 2024/10/25 00:26:56 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-	#define WHATEVER_HPP
+#ifndef ARRAY_HPP
+	#define ARRAY_HPP
 
 	#include <iostream>
-
-
-	template<typename T>
-	void	swap(T& a, T& b)
-	{
-		T	tmp;
-	
-		tmp = a;
-		a = b;
-		b = tmp;
-	}
+	#include <string>
 
 	template<typename T>
-	T	min(T& a, T&b)
+	class	Array
 	{
-		return (a <= b) ? a : b;
-	}
+		private :
+			T *_tab;
+		public :
+			Array();
+			Array(const Array& other);
+			~Array();
 
-	template<typename T>
-	T	max(T& a, T&b)
-	{
-		return (a >= b) ? a : b;
-	}
-	// template<typename T>
-	// void	swap(T& a, T& b);
-
-	// template<typename T>
-	// T	min(T& a, T& b);
-
-	// template<typename T>
-	// T	max(T& a, T& b);
+			Array& operator=(const Array& other);
+			
+	};
 
 #endif

@@ -1,4 +1,4 @@
-NAME	=	Start 
+NAME	=	iter 
 CC	=	c++
 
 CFLAGS	=	-Wall -Werror -Wextra -std=c++98 -g
@@ -8,7 +8,6 @@ SRC_PATH	=	srcs/
 OBJ_PATH	=	objs/
 
 SRC	=	main.cpp \
-		whatever.cpp \
 
 SRCS	=	$(addprefix $(SRC_PATH), $(SRC))
 
@@ -22,9 +21,9 @@ $(OBJ_PATH):
 			mkdir -p $(OBJ_PATH)
 
 $(NAME):	$(OBJS)
-	@echo "\033[0;33m\nCOMPILING Start ...\n"
+	@echo "\033[0;33m\nCOMPILING iter ...\n"
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-	@echo "\033[1;32m./Start created\n"
+	@echo "\033[1;32m./iter created\n"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
