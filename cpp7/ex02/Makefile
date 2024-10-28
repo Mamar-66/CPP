@@ -1,4 +1,4 @@
-NAME	=	iter 
+NAME	=	Array 
 CC	=	c++
 
 CFLAGS	=	-Wall -Werror -Wextra -std=c++98 -g
@@ -21,9 +21,9 @@ $(OBJ_PATH):
 			mkdir -p $(OBJ_PATH)
 
 $(NAME):	$(OBJS)
-	@echo "\033[0;33m\nCOMPILING iter ...\n"
+	@echo "\033[0;33m\nCOMPILING Array ...\n"
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-	@echo "\033[1;32m./iter created\n"
+	@echo "\033[1;32m./Array created\n"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
