@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:02:45 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/03 17:46:22 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/11/04 13:13:41 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 	#define SPAN_HPP
 
 	#include <iostream>
+	#include <algorithm>
 	#include <vector>
+	#include <cstdlib>
+	#include <climits>
 
 	#define RED     "\033[31m"
 	#define ORANGE  "\033[38;5;208m"
@@ -42,6 +45,7 @@
 			void				addNumber(unsigned int number);
 			unsigned int		shortestSpan();
 			unsigned int		longestSpan();
+			void				addNb(const std::vector<unsigned int>::iterator& begin, const std::vector<unsigned int>::iterator& end);
 
 			class ExceptionMaxNb : public std::exception
 			{
