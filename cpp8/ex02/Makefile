@@ -8,7 +8,6 @@ SRC_PATH	=	srcs/
 OBJ_PATH	=	objs/
 
 SRC	=	main.cpp \
-		Span.cpp \
 
 SRCS	=	$(addprefix $(SRC_PATH), $(SRC))
 
