@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:32:25 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/05 16:07:14 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/11/05 16:23:52 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,26 @@ int main()
 			++it;
 			++it_test;
 		}
+	}
+	std::cout << std::string(50, '-')<< std::endl;
+	{
+		MutantStack<std::string>	mstr;
+
+		mstr.push("word");
+		mstr.push(" ");
+		mstr.push("o");
+		mstr.push("l");
+		mstr.push("l");
+		mstr.push("e");
+		mstr.push("h");
+
+		MutantStack<std::string>::iterator it = mstr.begin();
+		MutantStack<std::string>::iterator ite = mstr.end();
+
+		while (it != ite--)
+		{
+			std::cout << *ite; 
+		}
+		std::cout << std::endl;
 	}
 }
