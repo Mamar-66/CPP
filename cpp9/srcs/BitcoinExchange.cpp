@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:42:23 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/07 15:20:18 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/11/07 16:35:41 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,20 @@ bool	gest_val(std::string& val)
 	return true;
 }
 
+float	BitcoinExchange::culcul(std::string& val, std::string& date)
+{
+
+	float		result = 0;
+	// std::string tmp_date = date;
+
+	// tmp_date.resize(tmp_date.size() - 1);
+	std::map<std::string, float>::iterator it = this->_data.upper_bound(date);
+
+	result = (--it)->second;
+
+	return (result * atof(val.c_str()));
+}
+
 void	BitcoinExchange::changeVal()
 {
 	std::string line;
@@ -123,7 +137,7 @@ void	BitcoinExchange::changeVal()
 
 		if (gest_date(date_ft) && gest_val(val))
 		{
-			std::cout << line << "=>" << val << " = " << std::endl;
+			std::cout << line << "=>" << val << " = "<< culcul(val, line) << std::endl;
 		}
 
 	}
