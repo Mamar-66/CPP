@@ -6,16 +6,20 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:47:36 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/08 16:31:59 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/11/09 11:16:31 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PMERGEME_HPP
 	#define PMERGEME_HPP
 
-	#include <iostream>
 	#include <vector>
+	#include <deque>
+	#include <iostream>
 	#include <cstdlib>
+	#include <algorithm>
+	#include <ctime>
+	#include <iomanip>
 
 	#define RED     "\033[31m"
 	#define ORANGE  "\033[38;5;208m"
@@ -38,6 +42,8 @@
 		
 	};
 
-	// void	fordJohnson(std::vector<unsigned int>& tab);
+	void	with_vec(std::vector<unsigned int>& tab);
+	void	with_deque(std::deque<unsigned int>& tab);
+	void	affich(std::vector<unsigned int>& tab, const std::string& str);
 	
 #endif

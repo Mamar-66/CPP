@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RPN.hpp                                            :+:      :+:    :+:   */
+/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 08:50:01 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/08 15:21:56 by omfelk           ###   ########.fr       */
+/*   Created: 2024/11/05 16:42:21 by omfelk            #+#    #+#             */
+/*   Updated: 2024/11/07 16:26:48 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RPN_HPP
-	#define RPN_HPP
+#ifndef BITCOINEXCHANGE
+	#define BITCOINEXCHANGE
 
 	#include <iostream>
-	#include <stack>
+	#include <fstream>
+	#include <string>
+	#include <cstdlib>
+	#include <map>
 
 	#define RED     "\033[31m"
 	#define ORANGE  "\033[38;5;208m"
@@ -24,18 +27,23 @@
 	#define BOLD    "\033[1m"
 	#define UNDERLINE "\033[4m"
 
-	#define SIGN(c) ((c) == '+' || (c) == '-' || (c) == '*' || (c) == '/')
-
-	class	RPN
+	class	BitcoinExchange
 	{
 		private :
-			RPN();
-			RPN(const RPN& other);
-			~RPN();
+			std::map<std::string, float>	_data;
+			void							_add_data();
 
-			RPN& operator=(const RPN& other);
+		public :
+			BitcoinExchange();
+			BitcoinExchange(const BitcoinExchange& other);
+			~BitcoinExchange();
+
+			BitcoinExchange& operator=(const BitcoinExchange& other);
+
+			std::ifstream					file_input;
+			float							culcul(std::string& val, std::string& date);
+			void							changeVal();
 	};
 
-	void	algo(char **argv);
 
 #endif

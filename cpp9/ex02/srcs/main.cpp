@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:46:50 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/08 16:47:57 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/11/09 11:21:57 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,19 @@ void	gest_input(int argc, char **argv)
 			throw std::runtime_error(RED "error caracter no autorized or nb negatif" RESET);
 	}
 
-	std::vector<unsigned int>	tab;
+	std::vector<unsigned int>	tab_vec;
+	std::deque<unsigned int>	tab_deque;
 
 	for(int i = 1; argv[i]; i++)
-		tab.push_back(atoi(argv[i]));
+	{
+		tab_vec.push_back(atoi(argv[i]));
+		tab_deque.push_back(atoi(argv[i]));
+	}
 
-
-
-
-	std::vector<unsigned int>::iterator	it = tab.begin();
-	std::vector<unsigned int>::iterator	ite = tab.end();
-
-	for(; it != ite; it++)
-		std::cout << *it << std::endl;
+	affich(tab_vec, "Before:");
+	std::cout << std::endl;
+	with_vec(tab_vec);
+	with_deque(tab_deque);
 }
 
 int	main(int argc, char **argv)

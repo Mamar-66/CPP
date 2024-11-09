@@ -6,11 +6,30 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 08:50:13 by omfelk            #+#    #+#             */
-/*   Updated: 2024/11/08 11:11:03 by omfelk           ###   ########.fr       */
+/*   Updated: 2024/11/08 15:23:32 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/RPN.hpp"
+
+RPN::RPN()
+{
+}
+
+RPN::RPN(const RPN& other)
+{
+	(void)other;
+}
+
+RPN::~RPN()
+{
+}
+
+RPN&	RPN::operator=(const RPN& other)
+{
+	(void)other;
+	return *this;
+}
 
 void	calcul(std::stack<int>& st, int sign)
 {
